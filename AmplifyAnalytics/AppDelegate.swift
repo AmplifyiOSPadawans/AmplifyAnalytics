@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import Amplify
+import AWSCognitoAuthPlugin
+import AWSPinpointAnalyticsPlugin
+import AWSCloudWatchLoggingPlugin
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        do {
+            try Amplify.add(plugin: AWSCognitoAuthPlugin())
+            try Amplify.add(plugin: AWSPinpointAnalyticsPlugin())
+            
+            let loggingConfiguration = AWSCloudWatchLoggingPluginConfiguration(logGroupName: "AmplifyAnalytics", region: "us-east-2", localStoreMaxSizeInMB: 1, flushIntervalInSeconds: 60)
+            let loggingPlugin = AWSCloudWatchLoggingPlugin(loggingPluginConfiguration: loggingConfiguration)
+            
+            try Amplify.add(plugin: loggingPlugin)
+            try Amplify.configure()
+            print("Amplify configured with Auth, Analytics amd CloudWatch plugins")
+        } catch {
+            print("Failed to initialize Amplify with \(error)")
+        }
+        
         return true
     }
 

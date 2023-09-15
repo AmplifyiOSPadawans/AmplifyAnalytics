@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961FFEB5A953B90B07BF2BF8 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C13E985F7DE7CB868E4BED3 /* awsconfiguration.json */; };
+		C0A45DE40EE9EE297D2D226A /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BD4E14B835E6B1888407F7EA /* amplifyconfiguration.json */; };
 		CA9FF7F02AB50D51005EC457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FF7EF2AB50D51005EC457 /* AppDelegate.swift */; };
 		CA9FF7F22AB50D51005EC457 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FF7F12AB50D51005EC457 /* SceneDelegate.swift */; };
 		CA9FF7F42AB50D51005EC457 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FF7F32AB50D51005EC457 /* ViewController.swift */; };
 		CA9FF7F72AB50D51005EC457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9FF7F52AB50D51005EC457 /* Main.storyboard */; };
 		CA9FF7F92AB50D53005EC457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9FF7F82AB50D53005EC457 /* Assets.xcassets */; };
 		CA9FF7FC2AB50D53005EC457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9FF7FA2AB50D53005EC457 /* LaunchScreen.storyboard */; };
+		CA9FF8052AB50DF5005EC457 /* AWSCloudWatchLoggingPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = CA9FF8042AB50DF5005EC457 /* AWSCloudWatchLoggingPlugin */; };
+		CA9FF8072AB50DF5005EC457 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = CA9FF8062AB50DF5005EC457 /* AWSCognitoAuthPlugin */; };
+		CA9FF8092AB50DF5005EC457 /* AWSPinpointAnalyticsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = CA9FF8082AB50DF5005EC457 /* AWSPinpointAnalyticsPlugin */; };
+		CA9FF80B2AB50DF5005EC457 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = CA9FF80A2AB50DF5005EC457 /* Amplify */; };
+		CA9FF80D2AB51839005EC457 /* TrackEventsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FF80C2AB51839005EC457 /* TrackEventsHelper.swift */; };
+		CA9FF80F2AB51C6F005EC457 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FF80E2AB51C6F005EC457 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C13E985F7DE7CB868E4BED3 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		BD4E14B835E6B1888407F7EA /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		CA9FF7EC2AB50D51005EC457 /* AmplifyAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmplifyAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9FF7EF2AB50D51005EC457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA9FF7F12AB50D51005EC457 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +34,8 @@
 		CA9FF7F82AB50D53005EC457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA9FF7FB2AB50D53005EC457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA9FF7FD2AB50D53005EC457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9FF80C2AB51839005EC457 /* TrackEventsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEventsHelper.swift; sourceTree = "<group>"; };
+		CA9FF80E2AB51C6F005EC457 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9FF8052AB50DF5005EC457 /* AWSCloudWatchLoggingPlugin in Frameworks */,
+				CA9FF80B2AB50DF5005EC457 /* Amplify in Frameworks */,
+				CA9FF8092AB50DF5005EC457 /* AWSPinpointAnalyticsPlugin in Frameworks */,
+				CA9FF8072AB50DF5005EC457 /* AWSCognitoAuthPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +58,7 @@
 			children = (
 				CA9FF7EE2AB50D51005EC457 /* AmplifyAnalytics */,
 				CA9FF7ED2AB50D51005EC457 /* Products */,
+				EC047BAF834BB5DDE90557F4 /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +80,19 @@
 				CA9FF7F82AB50D53005EC457 /* Assets.xcassets */,
 				CA9FF7FA2AB50D53005EC457 /* LaunchScreen.storyboard */,
 				CA9FF7FD2AB50D53005EC457 /* Info.plist */,
+				CA9FF80C2AB51839005EC457 /* TrackEventsHelper.swift */,
+				CA9FF80E2AB51C6F005EC457 /* SecondViewController.swift */,
 			);
 			path = AmplifyAnalytics;
+			sourceTree = "<group>";
+		};
+		EC047BAF834BB5DDE90557F4 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				5C13E985F7DE7CB868E4BED3 /* awsconfiguration.json */,
+				BD4E14B835E6B1888407F7EA /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +111,12 @@
 			dependencies = (
 			);
 			name = AmplifyAnalytics;
+			packageProductDependencies = (
+				CA9FF8042AB50DF5005EC457 /* AWSCloudWatchLoggingPlugin */,
+				CA9FF8062AB50DF5005EC457 /* AWSCognitoAuthPlugin */,
+				CA9FF8082AB50DF5005EC457 /* AWSPinpointAnalyticsPlugin */,
+				CA9FF80A2AB50DF5005EC457 /* Amplify */,
+			);
 			productName = AmplifyAnalytics;
 			productReference = CA9FF7EC2AB50D51005EC457 /* AmplifyAnalytics.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +145,9 @@
 				Base,
 			);
 			mainGroup = CA9FF7E32AB50D51005EC457;
+			packageReferences = (
+				CA9FF8032AB50DF5005EC457 /* XCRemoteSwiftPackageReference "amplify-swift" */,
+			);
 			productRefGroup = CA9FF7ED2AB50D51005EC457 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +165,8 @@
 				CA9FF7FC2AB50D53005EC457 /* LaunchScreen.storyboard in Resources */,
 				CA9FF7F92AB50D53005EC457 /* Assets.xcassets in Resources */,
 				CA9FF7F72AB50D51005EC457 /* Main.storyboard in Resources */,
+				961FFEB5A953B90B07BF2BF8 /* awsconfiguration.json in Resources */,
+				C0A45DE40EE9EE297D2D226A /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9FF80D2AB51839005EC457 /* TrackEventsHelper.swift in Sources */,
 				CA9FF7F42AB50D51005EC457 /* ViewController.swift in Sources */,
 				CA9FF7F02AB50D51005EC457 /* AppDelegate.swift in Sources */,
+				CA9FF80F2AB51C6F005EC457 /* SecondViewController.swift in Sources */,
 				CA9FF7F22AB50D51005EC457 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +399,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA9FF8032AB50DF5005EC457 /* XCRemoteSwiftPackageReference "amplify-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA9FF8042AB50DF5005EC457 /* AWSCloudWatchLoggingPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA9FF8032AB50DF5005EC457 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSCloudWatchLoggingPlugin;
+		};
+		CA9FF8062AB50DF5005EC457 /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA9FF8032AB50DF5005EC457 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSCognitoAuthPlugin;
+		};
+		CA9FF8082AB50DF5005EC457 /* AWSPinpointAnalyticsPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA9FF8032AB50DF5005EC457 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSPinpointAnalyticsPlugin;
+		};
+		CA9FF80A2AB50DF5005EC457 /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA9FF8032AB50DF5005EC457 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = Amplify;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA9FF7E42AB50D51005EC457 /* Project object */;
 }
